@@ -1,0 +1,41 @@
+// Layout
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.page-container {
+    width: 100%;
+    margin: 4rem 0;
+}
+.container {
+    // flex: 1 1 auto;
+    // margin-top: 64px;
+    padding: 24px 12px;
+    // margin-right: 16px;
+    // background-color: var(--second);
+}
+.container-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 1.4rem;
+    padding: 16px 0;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--primary-extra-light);
+}
+.container-title > span {
+    color: var(--primary-extra-light);
+    font-size: 0.4em;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+section.container-main {
+    // max-width: 60%;
+    flex: 1 1 100%;
+}
+aside.container-aside {
+    flex: 0 0 auto;
+    margin-right: inherit;
+}

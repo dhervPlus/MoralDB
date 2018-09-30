@@ -1,5 +1,5 @@
 <nav>
-<div class='nav-header'>
+<div class='nav-header page-container'>
     <div class='nav-date'>Today, 25th September</div>
     <div class='nav-title'>
         <h1>The Moral DB</h1>

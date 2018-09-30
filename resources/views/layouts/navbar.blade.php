@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="navbar page-container">
     <ul class="navbar-list">
         <li>
             <a href="#">workplace</a>

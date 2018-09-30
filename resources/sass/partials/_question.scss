@@ -1,0 +1,40 @@
+// Question Index
+.question {
+    width: 60%;
+    margin-top: 5rem;
+}
+.question-main {
+    margin-bottom: 4rem
+}
+.question-item {
+    padding: 24px 0;
+}
+.question-link {
+    text-decoration: none;
+}
+.question-group {
+    display: flex;
+    // color: var(--primary-light);
+    align-items: center;
+    justify-content: space-between;
+}
+.question-title {
+    font-size: 1.3rem;
+    text-transform: initial;
+    font-family: var(--font-header);
+    // color: var(--primary-light);
+    font-weight: 600;
+    font-size: 2em;
+}
+.question-title-show::first-letter {
+    text-transform: capitalize;
+}
+.question-date {
+    color: var(--primary-extra-light);
+    margin-bottom: 16px;
+}
+.question-index-comment {
+    font-style: italic;
+    color: var(--primary-light);
+    max-width: 60%;
+}

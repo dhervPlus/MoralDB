@@ -1,4 +1,4 @@
-<aside class="container">
+<aside class="container container-aside">
     <div class="container-title">
             <h4 >Popular</h4>
             <span>this week</span>

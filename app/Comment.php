@@ -15,6 +15,11 @@ class Comment extends Model
     {
         return $this->hasMany(Likes::class);
     }
+    public function checkLikes() {
+
+        $liked = $this->like()->where(['user_id' => auth()->id()])->exists();
+        return $liked;
+    }
     public function addLike()
     {
         $exist = $this->like()->where(['comment_id' => $this->id, 'user_id' => auth()->id()])->exists();
@@ -24,11 +29,8 @@ class Comment extends Model
                 'comment_id' => $this->id,
                 'user_id' => auth()->id()
             ]);
-            $added = 'exists';
-        } else {
-            $added = 'exists';
+            $added = true;
         }
-
         return $added;
     }
 }

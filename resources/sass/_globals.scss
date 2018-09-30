@@ -1,0 +1,31 @@
+// Globals
+body {
+    background-color: #fff;
+    color: var(--primary);
+    font-family: var(--font-body);
+    margin: 0 10rem;
+    box-sizing: border-box;
+}
+h1 {
+    font-family: 'TimesModern-Bold';
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.75;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: capitalize;
+}
+a {
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
