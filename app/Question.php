@@ -42,9 +42,12 @@ class Question extends Model
         $total = $yes + $no;
         $percent = ['yes' => $total ? $yes/$total * 100 : 0, 'no' => $total ? $no/$total * 100 : 0];
         $answers = $this->answers()->get();
+        $exist = $this->answers()->where('user_id', auth()->id())->exists();
+
         $return = [
             'answers' => $answers,
-            'percent' => $percent
+            'percent' => $percent,
+            'exist' => $exist
         ];
         return $return;
     }

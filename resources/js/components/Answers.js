@@ -1,4 +1,4 @@
-import Answer from './Answer'
+import Answer from './Answer';
 export default class Answers {
     constructor(elements, id) {
         this.elements = elements
@@ -13,7 +13,6 @@ export default class Answers {
         this.elements.forEach(answer => new Answer(answer, this.id, this.render.bind(this)))
     }
     render(response) {
-        console.log(response, this.elements)
         this.elements.forEach(answer => {
             answer.style.width = `${response.percent[answer.dataset.name]}%`;
             answer.style.transition = 'all .3s linear';

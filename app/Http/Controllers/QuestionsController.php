@@ -38,8 +38,9 @@ class QuestionsController extends Controller
         $get = $question->getPercent();
         $percent = $get['percent'];
         $answer = $get['answers'];
+        $exist= $get['exist'];
         // dd($answer);
-        return view('questions.show', compact('question', 'percent', 'answers'));
+        return view('questions.show', compact('question', 'percent', 'answer', 'exist'));
     }
     public function create()
     {

@@ -141,6 +141,11 @@ table {
   border-spacing: 0;
 }
 
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
   color: var(--primary);
@@ -367,6 +372,44 @@ aside.container-aside {
 
 .comment-like .fas {
   color: var(--second);
+}
+
+.input-textarea {
+  position: relative;
+}
+
+.comment-create label {
+  position: absolute;
+  left: 0;
+  top: .5rem;
+  color: #9e9e9e;
+  max-height: 1rem;
+  -webkit-transition: font-size .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: font-size .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, font-size .3s ease-in-out;
+  transition: transform .3s ease-in-out, font-size .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.comment-create textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--second);
+  resize: none;
+  height: 2rem;
+  line-height: normal;
+  outline: none !important;
+}
+
+.comment-create textarea:focus + label {
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  font-size: .8rem;
+  color: var(--second);
+}
+
+.comment-create button {
+  background-color: var(--second);
+  color: white;
 }
 
 .nav-header {
