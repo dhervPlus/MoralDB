@@ -3,7 +3,7 @@ body {
     background-color: #fff;
     color: var(--primary);
     font-family: var(--font-body);
-    margin: 0 10rem;
+    margin: 10rem;
     box-sizing: border-box;
 }
 h1 {
@@ -28,4 +28,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+button {
+    border: none;
 }

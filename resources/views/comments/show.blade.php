@@ -3,14 +3,14 @@
         <img src={{ asset( 'images/'.$comment->user->picture) }}>
     </div>
     <div class="comment-body">
-        <div>
+        <div class="comment-data">
             <div class="comment-head">
                 <p class="comment-author">{{ $comment->user->name }}</p>
                 <p class="comment-date">
                     posted {{ $comment->created_at->diffForHumans() }}
                 </p>
             </div>
-            <p>
+            <p class="comment-text">
                 {{ $comment->comment }}
             </p>
         </div>

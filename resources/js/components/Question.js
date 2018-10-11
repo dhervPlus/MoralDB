@@ -1,4 +1,5 @@
-import Answers from './Answers'
+import Answers from './Answers';
+
 export default class Question {
     constructor(element) {
         this.element = element
