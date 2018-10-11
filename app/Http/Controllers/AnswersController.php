@@ -12,4 +12,8 @@ class AnswersController extends Controller
        return $question->addAnswer($type);
 
     }
+    public function index() {
+        $questions = Question::has('answers')->get();
+        return view('answers.index', compact('questions'));
+    }
 }

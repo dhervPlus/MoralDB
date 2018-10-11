@@ -15,14 +15,16 @@ Route::group(['middleware' => ['checkAuth']], function () {
     Route::get('/questions/create', 'QuestionsController@create');
     Route::get('/questions/{question}', 'QuestionsController@show');
     Route::post('/questions', 'QuestionsController@store');
+    Route::get('/answers', 'AnswersController@index');
+    Route::get('/account', 'HomeController@goToAccounts');
 
     Route::post('questions/{question}/comments', 'CommentsController@store');
     Route::get('questions/{question}/answers/{type}', 'AnswersController@store');
     Route::get('/comments/{comment}/likes', 'LikesController@store');
 
-    Route::get('/register', 'RegistrationController@create');
-    Route::post('/register', 'RegistrationController@store');
 });
+Route::get('/register', 'RegistrationController@create');
+Route::post('/register', 'RegistrationController@store');
 
 Route::get('/login', 'SessionController@create');
 Route::post('/login', 'SessionController@store');

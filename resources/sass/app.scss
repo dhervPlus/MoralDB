@@ -6,6 +6,7 @@
 @import 'components';
 @import 'partials/question';
 @import 'partials/comment';
+@import 'partials/my_answers';
 // Navigation
 .nav-header {
     position: relative;
@@ -96,4 +97,9 @@
 .percent.on {
     opacity: 1;
     transition: opacity 0.3s linear;
+}
+
+a .fa {
+    font-size: 20px;
+    margin-right: 10px;
 }

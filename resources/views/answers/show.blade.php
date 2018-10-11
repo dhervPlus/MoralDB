@@ -15,4 +15,3 @@
         <span class='percent off'>{{ floor((int)$percent['no']) }}%</span></div>
 
 @endif
-

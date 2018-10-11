@@ -6,7 +6,9 @@
     </div>
     <div class='nav-icons'>
         <input class='nav-search' type="text" name='search' />
-        <i class="fa fa-search" aria-hidden="true"></i>
+        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+
+        <a href="/account"><i class="fa fa-user" aria-hidden="true"></i></a>
     @include('components.buttons.login')
     </div>
 </div>
