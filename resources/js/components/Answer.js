@@ -10,7 +10,6 @@ export default class Answer {
     init() {
         // this.cacheDOM();
         this.bindEvents();
-        console.log(this)
     }
     cacheDOM() {
     }

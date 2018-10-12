@@ -30,7 +30,7 @@ class QuestionsController extends Controller
 
         // $popular->all();
 
-        $popular = Question::withCount('answers')->orderBy('answers_count', 'desc')->get();
+        $popular = Question::withCount('answers')->orderBy('answers_count', 'desc')->limit(5)->get();
         return view('questions.index', compact('questions', 'popular'));
     }
     public function show(Question $question)
@@ -38,7 +38,7 @@ class QuestionsController extends Controller
         $get = $question->getPercent();
         $percent = $get['percent'];
         $answer = $get['answers'];
-        $exist= $get['exist'];
+        $exist = $get['exist'];
         // dd($answer);
         return view('questions.show', compact('question', 'percent', 'answer', 'exist'));
     }
@@ -56,5 +56,29 @@ class QuestionsController extends Controller
             new Question(request(['title', 'description', auth()->id()]))
         );
         return redirect('/');
+    }
+    public function search(Request $request)
+    {
+        // get string search
+        $value = $request->input('search');
+        return redirect('/questions/results?q=' . $value);
+        // return all matches
+
+        // return redirect()->route('questions/search?page=', [$matches]);
+    }
+    public function results(Request $request)
+    {
+          // search question table 'description' by text
+        $questions = Question::where('description', 'LIKE', "%{$request['q']}%")->paginate(3);
+        $questions->withPath('/questions/results?q=' . $request['q'] );
+        return view('questions.search', compact('questions'));
+        // return all matches
+
+        // return redirect()->route('questions/search?page=', [$matches]);
+    }
+
+    public function showSearch($matches)
+    {
+        dd($matches);
     }
 }

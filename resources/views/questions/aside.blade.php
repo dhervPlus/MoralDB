@@ -5,12 +5,14 @@
     </div>
 
     <ul class='popular-list'>
-    @foreach($popular as $i=>$pop)
+    @foreach ($popular as $index=>$popular)
     <li class='popular-item'>
-            <div class='popular-number'>0{{ $i + 1 }}</div>
-            <div class='popular-body'>{{ $pop->description }}</div>
-        </li>
+        <div class='popular-number'>0{{ $index + 1}}</div>
+        <div class='popular-body'>{{ $popular->description }}</div>
+    </li>
     @endforeach
+
+
 
 
 

@@ -1,5 +1,6 @@
 import Comment from './components/Comment';
 import Question from './components/Question';
+import Search from './components/Search';
 (function() {
     class App {
         constructor() {
@@ -8,6 +9,7 @@ import Question from './components/Question';
         init() {
             document.querySelectorAll('.comment').forEach(comment => new Comment(comment))
             document.querySelectorAll('.question').forEach(question => new Question(question));
+            document.querySelectorAll('input[type="search"]').forEach(search => new Search(search))
         }
     }
     new App();
